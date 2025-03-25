@@ -1,0 +1,31 @@
+#ifdef OPLUS_FEATURE_PXLW_IRIS5
+#GouBo@ANDROID.LCD, 2022/9/7, add for iris7 calibration
+firmware_directories /mnt/vendor/persist/display/
+#endif /* OPLUS_FEATURE_PXLW_IRIS5 */
+
+subsystem adf
+    devname uevent_devname
+
+#yanghao@PSW.KERNEL.Stability. change owner and ADC access 
+/dev/block/bootdevice/by-name/oplusreserve1               0660   root     system
+/dev/block/sdf2   0660   root     system
+/dev/block/bootdevice/by-name/oplusreserve3               0660   root     system
+/dev/block/sdf4   0660   root     system
+
+/dev/block/bootdevice/by-name/oplusreserve5               0660   root     system
+/dev/block/sdf6   0660   root     system
+/dev/block/sdf5   0660   root     system
+
+#Hong.Zhang@TECH.BSP.Stability.Aging2.0, 2020/07/14, Add for aging 2.0
+#ifdef OPLUS_FEATURE_AGINGTEST
+/dev/block/bootdevice/by-name/ddr                0660           root     system
+/dev/block/sdd3                                  0660           root     system
+#endif
+
+#ifdef OPLUS_FEATURE_BLUETOOTH_EAR
+#GaoShangxiu@Connectivity.BT, 2022/08/22, Add for ear
+/dev/ttyHS1            0660 bluetooth bluetooth
+/dev/zeku_ear_spi1     0660 bluetooth bluetooth
+/dev/btear             0660 bluetooth bluetooth
+/dev/zeku_ear_spi0     0660 system    audio
+#endif /* OPLUS_FEATURE_BLUETOOTH_EAR */

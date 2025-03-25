@@ -1,0 +1,14 @@
+//
+// Copyright (C) 2025 The Android Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_oplus_sm87xx",
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["libinit_oplus_sm87xx.cpp"],
+    recovery_available: true,
+}

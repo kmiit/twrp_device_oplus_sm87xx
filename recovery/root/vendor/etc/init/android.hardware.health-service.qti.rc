@@ -1,0 +1,15 @@
+service vendor.health-default /vendor/bin/hw/android.hardware.health-service.qti
+    class hal
+    user root
+    group root
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w
+    seclabel u:r:recovery:s0
+
+service vendor.charger /vendor/bin/hw/android.hardware.health-service.qti --charger
+    class charger
+    seclabel u:r:recovery:s0
+    user root
+    group root wakelock input graphics
+    capabilities SYS_BOOT WAKE_ALARM BLOCK_SUSPEND
+    file /dev/kmsg w

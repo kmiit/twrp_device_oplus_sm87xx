@@ -1,0 +1,38 @@
+# mount point   fstype  device                                          device2             flags
+# Logical partitions
+/system_ext     ext4    system_ext                                                          flags=display=system_ext
+/system_dlkm    ext4    system_dlkm                                                         flags=display=system_dlkm
+/vendor_dlkm    ext4    vendor_dlkm                                                         flags=display=vendor_dlkm
+
+# Userdata/Metadata partitions
+/metadata       ext4    /dev/block/by-name/metadata                                         flags=display=metadata
+
+# Boot partitions
+/boot           emmc    /dev/block/bootdevice/by-name/boot                                  flags=slotselect
+/init_boot      emmc    /dev/block/bootdevice/by-name/init_boot                             flags=slotselect;display="init_boot";backup=1;flashimg=1
+/vendor_boot    emmc    /dev/block/bootdevice/by-name/vendor_boot                           flags=slotselect;display="vendor_boot";backup=1;flashimg=1
+/recovery       emmc    /dev/block/bootdevice/by-name/recovery                              flags=slotselect;display="recovery";backup=1;flashimg=1
+/dtbo           emmc    /dev/block/bootdevice/by-name/dtbo                                  flags=slotselect;display="dtbo";backup=1;flashimg=1
+
+# AVB partitions
+/vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                                flags=slotselect;display="vbmeta";backup=1;flashimg=1
+/vbmeta_system  emmc    /dev/block/bootdevice/by-name/vbmeta_system                         flags=slotselect;display="vbmeta_system";backup=1;flashimg=1
+/vbmeta_vendor  emmc    /dev/block/bootdevice/by-name/vbmeta_vendor                         flags=slotselect;display="vbmeta_vendor";backup=1;flashimg=1
+
+# Persistent Firmware & Properties
+/firmware       vfat    /dev/block/bootdevice/by-name/modem                                 flags=slotselect;display="firmware";mounttodecrypt;fsflags="ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0"
+/persist        ext4    /dev/block/bootdevice/by-name/persist                               flags=display="persist";fsflags=ro
+
+# Modem partitions
+/modem          emmc    /dev/block/bootdevice/by-name/modem                                 flags=slotselect;backup=1;display="modem"
+/bluetooth      emmc    /dev/block/bootdevice/by-name/bluetooth                             flags=slotselect;backup=1;subpartitionof=/modem
+/dsp            emmc    /dev/block/bootdevice/by-name/dsp                                   flags=slotselect;backup=1;subpartitionof=/modem
+
+# EFS partitions
+/efs1           emmc    /dev/block/bootdevice/by-name/modemst1                              flags=backup=1;display="efs"
+/efs2           emmc    /dev/block/bootdevice/by-name/modemst2                              flags=backup=1;subpartitionof=/efs1
+/efsc           emmc    /dev/block/bootdevice/by-name/fsc                                   flags=backup=1;subpartitionof=/efs1
+/efsg           emmc    /dev/block/bootdevice/by-name/fsg                                   flags=backup=1;subpartitionof=/efs1
+
+# Removable storage
+/usbstorage     vfat    /dev/block/sdg1                                 /dev/block/sdg      flags=fsflags=utf8;display="USB Storage";storage;wipeingui;removable

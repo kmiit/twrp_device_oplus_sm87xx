@@ -31,5 +31,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS   := false
 PRODUCT_ENABLE_UFFD_GC                          := true
 
+# OTA certs
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+	$(DEVICE_PATH)/security/local_OTA \
+	$(DEVICE_PATH)/security/special_OTA
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)

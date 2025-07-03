@@ -32,6 +32,7 @@ on early-fs
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
+    setprop prepdecrypt.setpatch true
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -57,6 +58,9 @@ on property:twrp.modules.loaded=true
     start vendor.oplus.vibrator
     start vendor.gatekeeper_default
     umount /firmware
+
+on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
+    start prepdecrypt.vendor
 
 on property:vendor.sys.listeners.registered=true
     setprop sys.boot_completed 1

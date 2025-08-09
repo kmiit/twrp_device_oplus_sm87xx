@@ -1,7 +1,7 @@
 # TWRP device tree for OPLUS sm87xx sreies
 
 ## Supported devices
-- Realme GT7 Pro (CN)
+- Realme GT7 Pro (CN, GL)
 - OnePlus 13T (CN)
 - OnePlus Ace 5 Pro (CN)
 

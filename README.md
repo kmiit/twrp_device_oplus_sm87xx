@@ -1,6 +1,7 @@
 # TWRP device tree for OPLUS sm87xx sreies
 
 ## Supported devices
+- Realme GT7 Pro (CN)
 
 ## Build it yourself?
 

@@ -52,6 +52,9 @@ void vendor_load_properties() {
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
 
     switch (prjname) {
+        case 24600: // RMX5010 CN
+            SetupModelProperties("realme", "RE6010L1", "realme", "RMX5010", "RMX5010", "0");
+            break;
         default:
             LOG(ERROR) << "Unexpected prjname: " << prjname;
     }

@@ -178,7 +178,10 @@ check_dynamic()
 {
 	dynamic_partitions=$(getprop ro.boot.dynamic_partitions)
 	if [ "$dynamic_partitions" = "true" ]; then
-		unset suffix
+		if [[ ! -e "/dev/block/mapper/system$suffix" && ! -e "/dev/block/mapper/vendor$suffix" ]]; then
+			log_print 1 "/dev/block/mapper/system$suffix and /dev/block/mapper/vendor$suffix not Found! unset suffix"
+    		unset suffix
+		fi
 	fi
 }
 
@@ -339,13 +342,21 @@ if [ "$sdkver" -ge 26 ]; then
 
 		BUILDPROP="build.prop"
 		TEMPSYS=/s
-		syspath="/dev/block/bootdevice/by-name/system$suffix"
+		syspath="/dev/block/mapper/system$suffix"
+		if [ ! -e "/dev/block/mapper/system$suffix"]; then
+			log_print 2 "No system mapper found. Trying by-name..."
+    		syspath="/dev/block/bootdevice/by-name/system$suffix"
+		fi
 
 		if [ "$sdkver" -ge 29 ]; then
 			SAR=true
 			MNT_VENDOR=true
 			TEMPVEN=/v
-			venpath="/dev/block/bootdevice/by-name/vendor$suffix"
+			venpath="/dev/block/mapper/vendor$suffix"
+			if [ ! -e "/dev/block/mapper/vendor$suffix"]; then
+    			log_print 2 "No vendor mapper found. Trying by-name..."
+				venpath="/dev/block/bootdevice/by-name/vendor$suffix"
+			fi
 
 			temp_mount "$TEMPVEN" "vendor" "$venpath"
 
@@ -394,6 +405,11 @@ if [ "$sdkver" -ge 26 ]; then
 		fi
 
 		temp_mount "$TEMPSYS" "system" "$syspath"
+		if [ ! -f "$TEMPSYS/$BUILDPROP" ]; then
+			log_print 2 "/s Build.prop does not exist! Trying /system_root..."
+			TEMPSYS=/system_root
+			temp_mount "$TEMPSYS" "system" "$syspath"
+		fi
 
 		if [ -f "$TEMPSYS/$BUILDPROP" ]; then
 			log_print 2 "Build.prop exists! Reading system properties from build.prop..."
@@ -442,6 +458,9 @@ if [ "$sdkver" -ge 26 ]; then
 				log_print 2 "Current vendor is Nougat or older. Skipping vendor security patch level setting..."
 				finish
 			fi
+		else
+			TEMPSYS=/s
+			finish_error
 		fi
 	fi
 else

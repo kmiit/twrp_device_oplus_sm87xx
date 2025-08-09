@@ -57,3 +57,7 @@ on property:twrp.modules.loaded=true
     start vendor.oplus.vibrator
     start vendor.gatekeeper_default
     umount /firmware
+
+on property:vendor.sys.listeners.registered=true
+    setprop sys.boot_completed 1
+    start vendor.ssgtzd

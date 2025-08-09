@@ -1,0 +1,23 @@
+# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+
+# Create the directories used by qwes
+on post-fs-data
+    mkdir /data/vendor/qwes 0755 system system
+
+# Start daemon on early-init
+on early-boot
+    start vendor.ssgtzd
+
+# Used 'disabled' flag, so daemon won't be started until explicit start
+service vendor.ssgtzd /vendor/bin/ssgtzd
+    class late_start
+    user system
+    group system oem_2912 wakelock
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    disabled
+    socket ssgtzd stream 0660 system oem_2912
+    socket ssgtzd_opener stream 0660 system system
+    seclabel u:r:recovery:s0

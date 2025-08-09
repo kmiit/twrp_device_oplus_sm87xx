@@ -49,4 +49,5 @@ on property:twrp.modules.loaded=true
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
     start vendor.health-default
+    start vendor.boot-qti
     umount /firmware

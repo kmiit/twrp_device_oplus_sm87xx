@@ -54,6 +54,7 @@ TARGET_BOOTLOADER_BOARD_NAME    := sun
 
 # Crypto
 BOARD_USES_METADATA_PARTITION := true
+TW_INCLUDE_CRYPTO             := true
 
 # Debug
 TARGET_USES_LOGD                := true
@@ -79,6 +80,13 @@ BOARD_MKBOOTIMG_ARGS        += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS        += --pagesize $(BOARD_KERNEL_PAGESIZE)
 
 BOARD_RAMDISK_USE_LZ4       := true
+
+# Crypto
+BOARD_USES_METADATA_PARTITION := true
+
+# Init
+TARGET_INIT_VENDOR_LIB          := //$(DEVICE_PATH):libinit_oplus_sm87xx
+TARGET_RECOVERY_DEVICE_MODULES  := libinit_oplus_sm87xx
 
 # Partitions
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED  := true

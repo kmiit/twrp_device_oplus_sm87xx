@@ -55,4 +55,5 @@ on property:twrp.modules.loaded=true
     start vendor.health-default
     start vendor.boot-qti
     start vendor.oplus.vibrator
+    start vendor.gatekeeper_default
     umount /firmware

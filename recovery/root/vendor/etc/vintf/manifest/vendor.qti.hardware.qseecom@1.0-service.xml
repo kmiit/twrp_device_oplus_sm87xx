@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/qcom/proprietary/securemsm-noship/QSEEComAPI_HAL/1.0/service/vendor.qti.hardware.qseecom@1.0-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.qti.hardware.qseecom</name>
+        <fqname>IQSEECom/default</fqname>
+    </hal>
+</manifest>

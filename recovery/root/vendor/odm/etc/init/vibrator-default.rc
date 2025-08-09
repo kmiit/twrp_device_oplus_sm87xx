@@ -1,0 +1,49 @@
+on boot
+    chmod 0666 /dev/awinic_haptic
+    #ifeq ($(OPLUS_FEATURE_HAPTIC_VIBRATE),yes)
+    chown audioserver audioserver /dev/awinic_haptic
+    chown audioserver audioserver /sys/class/leds/vibrator/haptic_audio
+    chown audioserver audioserver /sys/calss/leds/vibrator/gun_type
+    chown audioserver audioserver /sys/class/leds/vibrator/bullet_nr
+    chown audioserver audioserver /sys/class/leds/vibrator/register
+    chown audioserver audioserver /sys/class/leds/vibrator/gun_mode
+    chmod 777 /sys/class/leds/vibrator/gun_type
+    chmod 777 /sys/class/leds/vibrator/bullet_nr
+    chmod 777 /sys/class/leds/vibrator/gun_mode
+    chmod 777 /sys/class/leds/vibrator/register
+    chmod 777 /sys/class/leds/vibrator/haptic_audio
+    #endif /* OPLUS_FEATURE_HAPTIC_VIBRATE */
+#ifdef OPLUS_FEATURE_CHG_BASIC
+#Changhui.Wu@PSW.BSP.CHG.Basic, 2021/9/16,  Add for vibration dev file
+    chown system system /sys/class/leds/vibrator/oplus_activate
+    chown system system /sys/class/leds/vibrator/oplus_duration
+    chown system system /sys/class/leds/vibrator/oplus_state
+    chown system system /sys/class/leds/vibrator/oplus_brightness
+    chown system system /sys/class/leds/vibrator/f0
+    chown system system /sys/class/leds/vibrator/cali
+    chown system system /sys/class/leds/vibrator/vmax
+    chown system system /sys/class/leds/vibrator/index
+    chmod 0666 /sys/class/leds/vibrator/index
+    chown system system /sys/class/leds/vibrator/loop
+    chown system system /sys/class/leds/vibrator/lra_resistance
+    chown system system /sys/class/leds/vibrator/ram_update
+    chown system audio /sys/class/leds/vibrator/rtp
+    chmod 0660 /sys/class/leds/vibrator/rtp
+    chown system system /sys/class/leds/vibrator/seq
+    chown system system /sys/class/leds/vibrator/motor_old
+    chmod 0666 /sys/class/leds/vibrator/motor_old
+    chown system system /sys/class/leds/vibrator/waveform_index
+    chown system system /sys/class/leds/vibrator/osc_cali
+    chmod 0660 /sys/class/leds/vibrator/osc_cali
+    chown system system /sys/class/leds/vibrator/osc_data
+    chown system system /sys/class/leds/vibrator/ram_test
+    chown system system /sys/class/leds/vibrator/f0_data
+    chown system system /sys/class/leds/vibrator/rtp_going
+#endif /* OPLUS_FEATURE_CHG_BASIC */
+service vendor.oplus.vibrator /odm/bin/hw/vendor.oplus.hardware.vibrator-service
+    class late_start
+    user root
+    group root input
+    setenv RICHTAP_DEVICE_PATH /dev/awinic_haptic
+    setenv ENV_RICHTAP_CONFIG_PATH /odm/etc/aac_richtap.config
+    seclabel u:r:recovery:s0

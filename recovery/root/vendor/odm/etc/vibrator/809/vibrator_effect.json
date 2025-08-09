@@ -1,0 +1,604 @@
+{
+   "809" : {
+      "def_style" : [
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_0.bin",
+            "effect_id" : 0,
+            "play_rate_hz" : 8000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_1.bin",
+            "effect_id" : 1,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_2.bin",
+            "effect_id" : 2,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_3.bin",
+            "effect_id" : 3,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_4.bin",
+            "effect_id" : 4,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_5.bin",
+            "effect_id" : 5,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_6.bin",
+            "effect_id" : 6,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_7.bin",
+            "effect_id" : 7,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_8.bin",
+            "effect_id" : 8,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_9.bin",
+            "effect_id" : 9,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_10.bin",
+            "effect_id" : 10,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_11.bin",
+            "effect_id" : 11,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_12.bin",
+            "effect_id" : 12,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_13.bin",
+            "effect_id" : 13,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_14.bin",
+            "effect_id" : 14,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_41.bin",
+            "effect_id" : 41,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_42.bin",
+            "effect_id" : 42,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_43.bin",
+            "effect_id" : 43,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_44.bin",
+            "effect_id" : 44,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_45.bin",
+            "effect_id" : 45,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_46.bin",
+            "effect_id" : 46,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_47.bin",
+            "effect_id" : 47,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_51.bin",
+            "effect_id" : 51,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_52.bin",
+            "effect_id" : 52,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_53.bin",
+            "effect_id" : 53,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_54.bin",
+            "effect_id" : 54,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_55.bin",
+            "effect_id" : 55,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_56.bin",
+            "effect_id" : 56,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_59.bin",
+            "effect_id" : 59,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_60.bin",
+            "effect_id" : 60,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_61.bin",
+            "effect_id" : 61,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_62.bin",
+            "effect_id" : 62,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_63.bin",
+            "effect_id" : 63,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_64.bin",
+            "effect_id" : 64,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_65.bin",
+            "effect_id" : 65,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_66.bin",
+            "effect_id" : 66,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_67.bin",
+            "effect_id" : 67,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_68.bin",
+            "effect_id" : 68,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_69.bin",
+            "effect_id" : 69,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_100.bin",
+            "effect_id" : 100,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_101.bin",
+            "effect_id" : 101,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_102.bin",
+            "effect_id" : 102,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_103.bin",
+            "effect_id" : 103,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_104.bin",
+            "effect_id" : 104,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_105.bin",
+            "effect_id" : 105,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_106.bin",
+            "effect_id" : 106,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_107.bin",
+            "effect_id" : 107,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_108.bin",
+            "effect_id" : 108,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_109.bin",
+            "effect_id" : 109,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_110.bin",
+            "effect_id" : 110,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_111.bin",
+            "effect_id" : 111,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_112.bin",
+            "effect_id" : 112,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_118.bin",
+            "effect_id" : 118,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_122.bin",
+            "effect_id" : 122,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_170.bin",
+            "effect_id" : 170,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_302.bin",
+            "effect_id" : 302,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_303.bin",
+            "effect_id" : 303,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_304.bin",
+            "effect_id" : 304,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_305.bin",
+            "effect_id" : 305,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_318.bin",
+            "effect_id" : 318,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_320.bin",
+            "effect_id" : 320,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_321.bin",
+            "effect_id" : 321,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_322.bin",
+            "effect_id" : 322,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_323.bin",
+            "effect_id" : 323,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_324.bin",
+            "effect_id" : 324,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_325.bin",
+            "effect_id" : 325,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_326.bin",
+            "effect_id" : 326,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_327.bin",
+            "effect_id" : 327,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_328.bin",
+            "effect_id" : 328,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_329.bin",
+            "effect_id" : 329,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_330.bin",
+            "effect_id" : 330,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_331.bin",
+            "effect_id" : 331,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_332.bin",
+            "effect_id" : 332,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_333.bin",
+            "effect_id" : 333,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_334.bin",
+            "effect_id" : 334,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_335.bin",
+            "effect_id" : 335,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_336.bin",
+            "effect_id" : 336,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_337.bin",
+            "effect_id" : 337,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_338.bin",
+            "effect_id" : 338,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_339.bin",
+            "effect_id" : 339,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_340.bin",
+            "effect_id" : 340,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_341.bin",
+            "effect_id" : 341,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_342.bin",
+            "effect_id" : 342,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_343.bin",
+            "effect_id" : 343,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_344.bin",
+            "effect_id" : 344,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_345.bin",
+            "effect_id" : 345,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_346.bin",
+            "effect_id" : 346,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_363.bin",
+            "effect_id" : 363,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_411.bin",
+            "effect_id" : 411,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_412.bin",
+            "effect_id" : 412,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_413.bin",
+            "effect_id" : 413,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_414.bin",
+            "effect_id" : 414,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_415.bin",
+            "effect_id" : 415,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_416.bin",
+            "effect_id" : 416,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_417.bin",
+            "effect_id" : 417,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_418.bin",
+            "effect_id" : 418,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_419.bin",
+            "effect_id" : 419,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_420.bin",
+            "effect_id" : 420,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_421.bin",
+            "effect_id" : 421,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_422.bin",
+            "effect_id" : 422,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_423.bin",
+            "effect_id" : 423,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_424.bin",
+            "effect_id" : 424,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_425.bin",
+            "effect_id" : 425,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_426.bin",
+            "effect_id" : 426,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/def/effect_427.bin",
+            "effect_id" : 427,
+            "play_rate_hz" : 24000
+         }
+      ],
+      "soft_style" : [
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_0.bin",
+            "effect_id" : 0,
+            "play_rate_hz" : 8000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_1.bin",
+            "effect_id" : 1,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_2.bin",
+            "effect_id" : 2,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_3.bin",
+            "effect_id" : 3,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_4.bin",
+            "effect_id" : 4,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_6.bin",
+            "effect_id" : 6,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_7.bin",
+            "effect_id" : 7,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_46.bin",
+            "effect_id" : 46,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_47.bin",
+            "effect_id" : 47,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_54.bin",
+            "effect_id" : 54,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_105.bin",
+            "effect_id" : 105,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_106.bin",
+            "effect_id" : 106,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_107.bin",
+            "effect_id" : 107,
+            "play_rate_hz" : 24000
+         },
+         {
+            "effect_file" : "/odm/etc/vibrator/809/soft/effect_109.bin",
+            "effect_id" : 109,
+            "play_rate_hz" : 24000
+         }
+      ]
+   },
+   "vibrator_arch" : "qcom-hv-haptic"
+}

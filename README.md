@@ -2,6 +2,7 @@
 
 ## Supported devices
 - Realme GT7 Pro (CN)
+- OnePlus 13T (CN)
 
 ## Build it yourself?
 

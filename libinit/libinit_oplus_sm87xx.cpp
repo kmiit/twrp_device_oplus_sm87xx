@@ -55,6 +55,9 @@ void vendor_load_properties() {
         case 24600: // RMX5010 CN
             SetupModelProperties("realme", "RE6010L1", "realme", "RMX5010", "RMX5010", "0");
             break;
+        case 24821: // pagani CN
+            SetupModelProperties("OnePlus", "OP60F5L1", "OnePlus", "PKX110", "PKX110", "1");
+            break;
         default:
             LOG(ERROR) << "Unexpected prjname: " << prjname;
     }

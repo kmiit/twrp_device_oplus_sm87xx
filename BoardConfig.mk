@@ -53,10 +53,10 @@ PRODUCT_PLATFORM                := sun
 TARGET_BOOTLOADER_BOARD_NAME    := sun
 
 # Crypto
-BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_CRYPTO             := true
-TW_INCLUDE_OMAPI := true
-TW_OMAPI_UUID := 636F6D2E6E78702E7365637572697479 
+BOARD_USES_METADATA_PARTITION   := true
+TW_INCLUDE_CRYPTO               := true
+TW_INCLUDE_OMAPI                := true
+TW_OMAPI_UUID                   := 636F6D2E6E78702E7365637572697479 
 
 # Debug
 TARGET_USES_LOGD                := true
@@ -83,13 +83,6 @@ BOARD_MKBOOTIMG_ARGS        += --pagesize $(BOARD_KERNEL_PAGESIZE)
 
 BOARD_RAMDISK_USE_LZ4       := true
 
-# Crypto
-BOARD_USES_METADATA_PARTITION := true
-
-# Init
-TARGET_INIT_VENDOR_LIB          := //$(DEVICE_PATH):libinit_oplus_sm87xx
-TARGET_RECOVERY_DEVICE_MODULES  := libinit_oplus_sm87xx
-
 # Partitions
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED  := true
 BOARD_RECOVERYIMAGE_PARTITION_SIZE      := 0x6400000
@@ -101,8 +94,8 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor 
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST += my_bigball my_carrier my_company my_engineering my_heytap my_manifest my_preload my_product my_region my_stock
 
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_ODM := odm
-TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_ODM             := odm
+TARGET_COPY_OUT_VENDOR          := vendor
 
 # Platform
 TARGET_BOARD_PLATFORM   := sm87xx

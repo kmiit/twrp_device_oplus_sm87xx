@@ -64,6 +64,9 @@ void vendor_load_properties() {
         case 24821: // pagani CN
             SetupModelProperties("OnePlus", "OP60F5L1", "OnePlus", "PKX110", "PKX110", "1");
             break;
+        case 23821: // dodge CN
+            SetupModelProperties("OnePlus", "OP5D0DL1", "OnePlus", "PJZ110", "PJZ110", "1");
+            break;
         default:
             LOG(ERROR) << "Unexpected prjname: " << prjname;
     }

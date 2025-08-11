@@ -53,7 +53,7 @@ void vendor_load_properties() {
 
     switch (prjname) {
         case 24600: // RMX5010 CN
-            SetupModelProperties("realme", "RE6010L1", "realme", "RMX5010", "RMX5010", "0");
+            SetupModelProperties("realme", "RE6018L1", "realme", "RMX5010", "RMX5010", "0");
             break;
         case 24670:
             SetupModelProperties("realme", "RE605FL1", "realme", "RMX5011", "RMX5011", "0");

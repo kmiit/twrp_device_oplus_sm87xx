@@ -343,7 +343,7 @@ if [ "$sdkver" -ge 26 ]; then
 		BUILDPROP="build.prop"
 		TEMPSYS=/s
 		syspath="/dev/block/mapper/system$suffix"
-		if [ ! -e "/dev/block/mapper/system$suffix"]; then
+		if [ ! -e "/dev/block/mapper/system$suffix" ]; then
 			log_print 2 "No system mapper found. Trying by-name..."
     		syspath="/dev/block/bootdevice/by-name/system$suffix"
 		fi
@@ -353,7 +353,7 @@ if [ "$sdkver" -ge 26 ]; then
 			MNT_VENDOR=true
 			TEMPVEN=/v
 			venpath="/dev/block/mapper/vendor$suffix"
-			if [ ! -e "/dev/block/mapper/vendor$suffix"]; then
+			if [ ! -e "/dev/block/mapper/vendor$suffix" ]; then
     			log_print 2 "No vendor mapper found. Trying by-name..."
 				venpath="/dev/block/bootdevice/by-name/vendor$suffix"
 			fi

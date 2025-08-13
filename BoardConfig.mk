@@ -108,6 +108,7 @@ TW_INCLUDE_FASTBOOTD                        := true
 
 # Tool
 TW_ENABLE_ALL_PARTITION_TOOLS := true
+TW_INCLUDE_7ZA                := true
 TW_INCLUDE_REPACKTOOLS        := true
 TW_INCLUDE_RESETPROP          := true
 TW_USE_TOOLBOX                := true

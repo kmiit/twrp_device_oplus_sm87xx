@@ -3,6 +3,7 @@
 ## Supported devices
 
 - Realme GT7 Pro (CN, GL)
+- Realme GT7 Pro Speed (CN, GL)
 - OnePlus 13T (CN)
 - OnePlus Ace 5 Pro (CN)
 - OnePlus 13 (CN)

@@ -55,6 +55,9 @@ void vendor_load_properties() {
         case 24600: // RMX5010 CN
             SetupModelProperties("realme", "RE6018L1", "realme", "RMX5010", "RMX5010", "0");
             break;
+        case 24620: // RMX5090 CN
+            SetupModelProperties("realme", "RE602CL1", "realme", "RMX5090", "RMX5090", "0");
+            break;
         case 24670:
             SetupModelProperties("realme", "RE605FL1", "realme", "RMX5011", "RMX5011", "0");
             break;

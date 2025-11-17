@@ -42,6 +42,7 @@ const std::unordered_map<int, ModelInfo> kModelInfoMap = {
     {24811, {"OnePlus", "OP60EBL1", "OnePlus", "PKR110",  "PKR110",  "0"}}, // hummer CN
     {24821, {"OnePlus", "OP60F5L1", "OnePlus", "PKX110",  "PKX110",  "1"}}, // pagani CN
     {24831, {"OnePlus", "OP60FFL1", "OnePlus", "PLK110",  "PLK110",  "1"}}, // infiniti CN
+    {25600, {"realme",  "RE6400L1", "realme",  "RMX6699", "RMX6699", "0"}}, // RMX6699 CN
     {0,     {"OPLUS",   "SM87XX",   "OPLUS",   "SM87XX",  "SM87XX",  "0"}}, // Default
 };
 

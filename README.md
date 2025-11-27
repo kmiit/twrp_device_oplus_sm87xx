@@ -8,6 +8,7 @@
 - OnePlus Ace 5 Pro (CN)
 - OnePlus 13 (CN)
 - Realme GT8 (CN)
+- OnePlus Ace 6 (CN)
 
 ## Build it yourself?
 

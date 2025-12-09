@@ -56,7 +56,6 @@ TARGET_BOOTLOADER_BOARD_NAME    := sun
 BOARD_USES_METADATA_PARTITION   := true
 TW_INCLUDE_CRYPTO               := true
 TW_INCLUDE_OMAPI                := true
-TW_OMAPI_UUID                   := 636F6D2E6E78702E7365637572697479 
 
 # Debug
 TARGET_USES_LOGD                := true

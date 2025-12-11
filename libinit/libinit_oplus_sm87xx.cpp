@@ -30,21 +30,21 @@ struct ModelInfo {
     const char* manufacturer;       // ro.product.manufacturer
     const char* model;              // ro.product.model
     const char* base_name;          // ro.product.name  w/o region suffix
+    const char* twversion;          // ro.twrp.device_version
     const char* supportSpr;         // vendor.display.enable_spr
 };
 
 const std::unordered_map<int, ModelInfo> kModelInfoMap = {
-    {23821, {"OnePlus", "OP5D0DL1", "OnePlus", "PJZ110",  "PJZ110",  "1"}}, // dodge CN
-    {24600, {"realme",  "RE6018L1", "realme",  "RMX5010", "RMX5010", "0"}}, // RMX5010 CN
-    {24620, {"realme",  "RE602CL1", "realme",  "RMX5090", "RMX5090", "0"}}, // RMX5090 CN
-    {24670, {"realme",  "RE605FL1", "realme",  "RMX5011", "RMX5011", "0"}}, // RMX5011 IN
-    {24671, {"realme",  "RE605FL1", "realme",  "RMX5011", "RMX5011", "0"}}, // RMX5011 EEA/RU
-    {24811, {"OnePlus", "OP60EBL1", "OnePlus", "PKR110",  "PKR110",  "0"}}, // hummer CN
-    {24821, {"OnePlus", "OP60F5L1", "OnePlus", "PKX110",  "PKX110",  "1"}}, // pagani CN
-    {24831, {"OnePlus", "OP60FFL1", "OnePlus", "PLK110",  "PLK110",  "1"}}, // infiniti CN
-    {24851, {"OnePlus", "OP6113L1", "OnePlus", "PLQ110",  "PLQ110",  "0"}}, // ktm CN
-    {25600, {"realme",  "RE6400L1", "realme",  "RMX6699", "RMX6699", "0"}}, // RMX6699 CN
-    {0,     {"OPLUS",   "SM87XX",   "OPLUS",   "SM87XX",  "SM87XX",  "0"}}, // Default
+    {23821, {"OnePlus", "OP5D0DL1", "OnePlus", "PJZ110",  "PJZ110",  "OnePlus_13",          "1"}}, // dodge CN
+    {24600, {"realme",  "RE6018L1", "realme",  "RMX5010", "RMX5010", "Realme_GT_7_Pro",     "0"}}, // RMX5010 CN
+    {24620, {"realme",  "RE602CL1", "realme",  "RMX5090", "RMX5090", "Realme_GT_7_Pro_JS",  "0"}}, // RMX5090 CN
+    {24670, {"realme",  "RE605FL1", "realme",  "RMX5011", "RMX5011", "Realme_GT_7_Pro",     "0"}}, // RMX5011 IN
+    {24671, {"realme",  "RE605FL1", "realme",  "RMX5011", "RMX5011", "Realme_GT_7_Pro",     "0"}}, // RMX5011 EEA/RU
+    {24811, {"OnePlus", "OP60EBL1", "OnePlus", "PKR110",  "PKR110",  "OnePlus_ACE_5_Pro",   "0"}}, // hummer CN
+    {24821, {"OnePlus", "OP60F5L1", "OnePlus", "PKX110",  "PKX110",  "OnePlus_13_T",        "1"}}, // pagani CN
+    {24851, {"OnePlus", "OP6113L1", "OnePlus", "PLQ110",  "PLQ110",  "OnePlus_ACE_6",       "0"}}, // ktm CN
+    {25600, {"realme",  "RE6400L1", "realme",  "RMX6699", "RMX6699", "Realme_GT_8",         "0"}}, // RMX6699 CN
+    {0,     {"OPLUS",   "SM87XX",   "OPLUS",   "SM87XX",  "SM87XX",  "SM87XX",              "0"}}, // Default
 };
 
 /*
@@ -75,6 +75,7 @@ void SetupModelProperties(const ModelInfo& info, const std::string& region) {
         {"ro.product.model",            info.model},
         {"ro.product.name",             name.c_str()},
         {"vendor.display.enable_spr",   info.supportSpr},
+        {"ro.twrp.device_version",      info.twversion},
         {"ro.build.date.utc",           "0"},
     };
     for (const auto& p : props) {

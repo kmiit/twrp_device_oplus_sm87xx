@@ -1,4 +1,4 @@
-service prepdecrypt.vendor /vendor/bin/prepdecrypt.sh
+service override-spl /vendor/bin/override-spl.sh
     user root
     group root
     disabled

@@ -111,6 +111,7 @@ TW_INCLUDE_7ZA                := true
 TW_INCLUDE_REPACKTOOLS        := true
 TW_INCLUDE_RESETPROP          := true
 TW_USE_TOOLBOX                := true
+TW_INCLUDE_ZSTD               := true
 
 # TWRP display
 TW_BRIGHTNESS_PATH      := /sys/class/backlight/panel0-backlight/brightness

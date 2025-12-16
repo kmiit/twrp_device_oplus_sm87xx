@@ -38,6 +38,8 @@ service post-boot-script /system/bin/sh -c /vendor/bin/init.kernel.post_boot-sun
 on init
     setprop sys.usb.configfs 1
     setprop prepdecrypt.setpatch true
+    start vendor.boot-qti
+    start vendor.gatekeeper_default
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -59,13 +61,12 @@ on property:twrp.modules.loaded=true
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
     start vendor.health-default
-    start vendor.boot-qti
+    start override-spl
+    umount /vendor
+    symlink /firmware /vendor/firmware_mnt
     start vendor.oplus.vibrator
-    start vendor.gatekeeper_default
-    umount /firmware
-
-on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
-    start prepdecrypt.vendor
+    start vendor.secure_element
+    start vendor.weaver_nxp
 
 on property:vendor.sys.listeners.registered=true
     setprop sys.boot_completed 1

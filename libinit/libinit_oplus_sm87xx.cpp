@@ -21,6 +21,7 @@ const std::unordered_map<int, std::string> kRegionSuffixMap = {
     {68,    "EEA"},
     {151,   ""},    // CN
     {161,   "NA"},
+    {167,   ""},    // GLO
     {0,     ""},    // Default
 };
 
@@ -36,6 +37,7 @@ struct ModelInfo {
 
 const std::unordered_map<int, ModelInfo> kModelInfoMap = {
     {23821, {"OnePlus", "OP5D0DL1", "OnePlus", "PJZ110",  "PJZ110",  "OnePlus_13",          "1"}}, // dodge CN
+    {23893, {"OnePlus", "OP5D55L1", "OnePlus", "CPH2653", "CPH2653", "OnePlus_13",          "1"}}, // dodge GLO
     {24600, {"realme",  "RE6018L1", "realme",  "RMX5010", "RMX5010", "Realme_GT_7_Pro",     "0"}}, // RMX5010 CN
     {24620, {"realme",  "RE602CL1", "realme",  "RMX5090", "RMX5090", "Realme_GT_7_Pro_JS",  "0"}}, // RMX5090 CN
     {24670, {"realme",  "RE605FL1", "realme",  "RMX5011", "RMX5011", "Realme_GT_7_Pro",     "0"}}, // RMX5011 IN

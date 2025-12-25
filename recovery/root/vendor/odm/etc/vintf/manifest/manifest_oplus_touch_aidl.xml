@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.touch</name>
+        <version>2</version>
+        <fqname>IOplusTouch/default</fqname>
+    </hal>
+</manifest>

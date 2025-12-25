@@ -1,0 +1,75 @@
+on early-init
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
+on init
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
+service vendor.touch-aidl-2  /odm/bin/hw/vendor.oplus.hardware.touch.V2-hbp5-service
+    class hal
+    capabilities SYS_NICE
+    user root
+    group root system everybody
+    group root system gps radio inet sdcard_r sdcard_rw inet
+    socket hidl2touchdaemon_client dgram 0660 root inet
+    socket hidl2touchdaemon_server dgram 0660 root inet
+    interface aidl vendor.oplus.hardware.touch.IOplusTouch/default
+    seclabel u:r:recovery:s0
+
+on boot
+    mkdir /data/vendor/touchconfig 0777 system system
+    chmod 0777 /data/vendor/touchconfig/sys_touch_function_feature_config.xml
+    chmod 0777 /data/vendor/touchconfig/sys_touch_algo_feature_config.xml
+    chown system system /dev/tp_misc
+    chown system system /proc/touchpanel/tp_fw_update
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/coordinate
+    chown system system /proc/touchpanel/game_switch_enable
+    chown system system /proc/touchpanel/fp_enable
+    chown system system /proc/touchpanel/baseline_test
+    chown system system /proc/touchpanel/kernel_grip_handle
+    chown system system /proc/touchpanel/curved_size
+    chown system system /proc/touchpanel/charge_detect
+    chown system system /proc/touchpanel/wireless_charge_detect
+    chown system system /proc/touchpanel/gesture_support
+
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_main.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_main.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_main2.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_main2.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_main3.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_main3.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_main4.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_main4.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_main5.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_main5.xml
+
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_sub.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_sub.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_sub2.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_sub2.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_sub3.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_sub3.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_sub4.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_sub4.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_algo_config_sub5.xml
+    chmod 0777 /data/vendor/touchconfig/vnd_custom_config_sub5.xml
+
+    chown system system /dev/hbp_core
+    chown system system /dev/hbp0
+    chown system system /dev/hbp1
+
+    chmod 660 /dev/hbp_core
+    chmod 660 /dev/hbp0
+    chmod 660 /dev/hbp1
+
+on post-fs-data
+    mkdir /data/vendor/touch 0771 system system
+    mkdir /data/vendor/touch/test 0771 system system
+    mkdir /data/vendor/touch/record 0771 system system
+    mkdir /data/vendor/touch/log 0771 system system
+    mkdir /data/vendor/touch/simulate 0771 system system
+    mkdir /data/vendor/touch/upload 0771 system system
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+

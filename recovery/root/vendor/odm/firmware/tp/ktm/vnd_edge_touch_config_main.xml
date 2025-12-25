@@ -1,0 +1,325 @@
+<filter-conf>
+    <version>2025102001</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_edge_touch_config</filter-name>
+
+		<device name="default">
+			<default>
+
+				<!-- 本台设备防误触开关，防误触抑制是否生效 -->
+
+				<!-- 防误触3.0长按时间参数 -->
+				<command name="finger_hold_matched_hor_support"	value="mod para_V2 finger_hold_matched_hor_support:0"/>
+				<command name="large_top_exit_distance" value="mod para_V2 large_top_exit_distance:480"/>
+				<command name="large_hor_top_x_width" value="mod para_V2 large_hor_long_top_width:870"/>
+				<command name="aft_txdir_node_num_thd" value="mod para_V2 aft_txdir_node_num_thd:7"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+
+
+			<packages>
+
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+
+					<item name="com.tencent.qqlive" /><!--腾讯视频-->
+					<item name="com.tencent.videolite.android" /><!--腾讯视频极速版-->
+					<item name="com.youku.phone" /><!--优酷-->
+					<item name="com.qiyi.video" /><!--爱奇艺-->
+					<item name="com.qiyi.video.lite" /><!--爱奇艺极速版-->
+					<item name="tv.danmaku.bili" /><!--哔哩哔哩-->
+					<item name="com.ss.android.article.video" /><!--西瓜视频-->
+					<item name="air.tv.douyu.android" /><!--斗鱼直播-->
+					<item name="com.duowan.kiwi" /><!--虎牙直播-->
+					<item name="com.baidu.haokan" /><!--好看视频-->
+					<item name="com.sohu.sohuvideo" /><!--搜狐视频-->
+					<item name="com.hunantv.imgo.activity" /><!--芒果TV-->
+					<item name="com.oplus.camera" /><!--相机-->
+
+
+				</pkg_list>
+
+					<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+					<!-- 防误触3.0长按时间参数 -->
+					<command name="finger_hold_matched_hor_support"	value="mod para_V2 finger_hold_matched_hor_support:1"/>
+					<command name="large_top_exit_distance"	value="mod para_V2 large_top_exit_distance:1500"/>
+					<command name="large_hor_long_top_width"	value="mod para_V2 large_hor_long_top_width:1000"/>
+					<command name="aft_txdir_node_num_thd"	value="mod para_V2 aft_txdir_node_num_thd:5"/>
+				</default>
+			</packages>
+			<default>
+
+				<!-- 抖音默认参数 -->
+				<command name="edge_swipe_exit_distance"	value="mod para_V2 edge_swipe_exit_distance:2080"/>
+				<command name="large_long_x1_width"	value="mod para_V2 large_long_x1_width:640"/>
+				<command name="large_long_x1_width_recli"	value="mod para_V2 large_long_x1_width_recli:500"/>
+				<command name="fsr_stable_time_thd"              value="mod para_V2 fsr_stable_time_thd:30"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.ss.android.ugc.aweme" /> <!--抖音-->
+					<item name="com.sina.weibo" /><!--微博-->
+					<item name="com.ss.android.article.video" /><!-- 西瓜视频-->
+				</pkg_list>
+				<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+				<!--增强抖音边缘滑动距离和竖屏消点参数 -->
+					<command name="edge_swipe_exit_distance"	value="mod para_V2 edge_swipe_exit_distance:3000"/>
+					<command name="large_long_x1_width"	value="mod para_V2 large_long_x1_width:700"/>
+					<command name="large_long_x1_width_recli"	value="mod para_V2 large_long_x1_width_recli:640"/>
+					<command name="fsr_stable_time_thd"              value="mod para_V2 fsr_stable_time_thd:20"/>
+				</default>
+			</packages>
+			<default>
+
+				<!-- 配置王者荣耀、英雄联盟顶部抑制参数 -->
+				<command name="large_hor_top_x_width"	value="mod para_V2 large_hor_long_top_width:350"/>
+				<command name="large_hor_top_y_height"	value="mod para_V2 large_hor_long_top_height:2270"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.lolm" /> <!--英雄联盟-->
+					<item name="com.tencent.tmgp.sgame" /> <!--王者荣耀-->
+					<item name="com.tencent.tmgp.sgamece" /> <!--王者荣耀体验服-->
+				</pkg_list>
+				<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+				<!--王者荣耀、英雄联盟顶部抑制参数 -->
+					<command name="large_hor_top_x_width"	value="mod para_V2 large_hor_long_top_width:300"/>
+					<command name="large_hor_top_y_height"	value="mod para_V2 large_hor_long_top_height:1000"/>
+				</default>
+			</packages>
+			<default>
+
+				<!-- 配置和平精英穿越火线参数 -->
+				<command name="large_hor_top_x_width"	value="mod para_V2 large_hor_long_top_width:350"/>
+				<command name="large_hor_top_y_height"	value="mod para_V2 large_hor_long_top_height:2270"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.pubgmhd" /> <!--和平精英-->
+					<item name="com.tencent.tmgp.cf" /> <!--穿越火线-->
+					<item name="moe.low.arc" /> <!--Arcaea-->
+				</pkg_list>
+				<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+				<!--王者荣耀、英雄联盟顶部抑制参数 -->
+					<command name="large_hor_top_x_width"	value="mod para_V2 large_hor_long_top_width:300"/>
+					<command name="large_hor_top_y_height"	value="mod para_V2 large_hor_long_top_height:1000"/>
+				</default>
+			</packages>
+
+			<default>
+				<!-- 退出以下列表apk的默认值 -->
+				<!-- 小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+				<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:1"/>
+				<!-- 竖屏长边消点方案，默认dts打开 -->
+				<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:1"/>
+				<!-- 竖屏不同侧抓握消点方案，默认dts打开 -->
+				<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:1"/>
+				<!-- 竖屏同一侧抓握消点方案，默认dts打开 -->
+				<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:1"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.antutu.ABenchMark" /> <!--安兔兔-->
+					<item name="com.ludashi.benchmark" /> <!--鲁大师-->
+					<item name="com.x1y9.probe" />  <!--隐密参数-->
+					<item name="com.longine.screentest" />  <!--屏幕检测专家-->
+					<item name="org.vv.screentest" />  <!--屏幕测试专家-->
+					<item name="com.oplus.postmanservice" />  <!--手机管家-->
+				</pkg_list>
+				<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+					<!-- 进入以下列表apk的默认值 -->
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:1"/>
+					<!-- 竖屏消点方案，默认dts打开 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:1"/>
+					<!-- 竖屏不同侧抓握方案，默认dts打开 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:1"/>
+					<!-- 竖屏同一侧抓握消点方案，默认dts打开 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:1"/>
+				</default>
+				<!-- 进入以下列表apk的特定界面的新的参数 -->
+				<!--包名列表中，某个包里面某个activity的配置，仍是基于外层的default配置增量修改，而非包名的default修改 -->
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.example.benchmark.ui.testscreen.activity.TouchAreaActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.example.benchmark.ui.testscreen.activity.MultiTouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.android.module.app.ui.testscreen.activity.TouchAreaActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.android.module.app.ui.testscreen.activity.MultiTouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<!--包名列表中，某个包里面某个activity的配置，仍是基于外层的default配置增量修改，而非包名的default修改 -->
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.android.module.screentesting.activity.TouchAreaActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.antutu.ABenchMark" activity_name="com.android.module.screentesting.activity.MultiTouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.ludashi.benchmark" activity_name="com.ludashi.benchmark.business.screen.activity.ScreenMultiTouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.ludashi.benchmark" activity_name="com.ludashi.benchmark.business.screen.activity.ScreenTouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.x1y9.probe" activity_name="com.x1y9.app.TouchActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.longine.screentest" activity_name="com.longine.screentest.touchpointActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.longine.screentest" activity_name="com.longine.screentest.touchregionActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="org.vv.screentest" activity_name="org.vv.screentest.TouchTestActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="org.vv.screentest" activity_name="org.vv.screentest.AreaTestActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+				<activity pkg_name="com.oplus.postmanservice" activity_name="com.coloros.healthcheck.categories.screen.MultiTouchCheckActivity">
+					<!--关闭小于预设边缘比例和宽度乘积阈值，进行滑动抑制 -->
+					<command name="edge_sliding_matched_support"	value="mod para_V2 edge_sliding_matched_support:0"/>
+					<!-- 竖屏消点方案，针对检测apk关闭 -->
+					<command name="long_eliminate_point_support"	value="mod para_V2 long_eliminate_point_support:0"/>
+					<!-- 竖屏不同侧抓握方案，针对检测apk关闭 -->
+					<command name="finger_hold_differ_size_support"	value="mod para_V2 finger_hold_differ_size_support:0"/>
+					<!-- 竖屏同一侧抓握消点方案，针对检测apk关闭 -->
+					<command name="finger_hold_matched_ver_support"	value="mod para_V2 finger_hold_matched_ver_support:0"/>
+				</activity>
+			</packages>
+
+
+			<default>
+
+				<!-- 关闭钢琴块2虎口检测 -->
+				<command name="long_start_coupling_thd"	value="mod para_V2 long_start_coupling_thd:179"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.cmplay.tiles2_cn" /> <!--钢琴块2-->
+				</pkg_list>
+				<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+				<!--加严钢琴块2边缘比例阈值 -->
+					<command name="long_start_coupling_thd"	value="mod para_V2 long_start_coupling_thd:1020"/>
+				</default>
+			</packages>
+
+		</device>
+
+</filter-conf>

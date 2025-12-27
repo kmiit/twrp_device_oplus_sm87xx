@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="ktm">
+	<version>20250717</version>
+	<device id="0" ic_name="synaptics-s3910">
+		<afelib>libs3910.so</afelib>
+		<afepanellib>libsynaHal.so</afepanellib>
+		<prealgolib>libprealgo.so</prealgolib>
+		<postalgolib>libpostalgo.so</postalgolib>
+		<mode afemode="diff" algomode="diff"></mode>
+		<glovetflite>GloveDetect.tflite</glovetflite>
+		<filmtflite>model.tflite</filmtflite>
+		<panel vendor="tianma" alias="AA605" hint="">
+				<algo-config scence="prefilter" path="vnd_algo_config_main.xml" />
+				<algo-config scence="post" path="vnd_algo_config_main.xml" />
+				<custom-config scence="default" path="vnd_custom_config_main.xml" />
+				<firmware-config path="vnd_tp_fw_main.bin" />
+				<grip-config path="vnd_edge_touch_config_main.xml" />
+				<touchScene-config path="vnd_touch_scene_config_main.xml" />
+		</panel>
+	</device>
+</project>

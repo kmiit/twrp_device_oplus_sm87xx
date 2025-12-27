@@ -1,0 +1,146 @@
+﻿<filter-conf>
+    <version>2025112501</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_scene_touch_config</filter-name>
+
+		<device name="default">
+			<default>
+				<!-- HBP框架应用调整触控效果参数 -->
+				<!-- 优化触控锁点参数 -->
+				<command name="sensitive_level"	value="mod para_effect sensitive_level:16"/>
+				<command name="set_package_type"	value="mod para_effect set_package_type:0"/>
+			</default>
+
+			<!--所有修改均为增量修改，所有增量修改都是基于上面的default配置，包括各个package里面的default和activity -->
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.coloros.calculator" /><!---计算器-->
+					<item name="oplus.inputting_method" /><!---输入法-->
+				</pkg_list>
+					<!--包名列表中，某个包的默认配置，基于外层的default配置增量修改，如果配置了某个包名的场景，必须配置一个如下对应的默认配置 -->
+				<default>
+					<!-- 优化触控锁点参数 -->
+					<command name="sensitive_level"	value="mod para_effect sensitive_level:17"/>
+					<command name="set_package_type"	value="mod para_effect set_package_type:20480"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.pubgmhd" /> <!--和平精英-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4112"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.cf" /> <!--穿越火线-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4113"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.dfm" /> <!--三角洲行动-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4114"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.mf.uam" /> <!--暗区突围-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4115"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.cod" /> <!--使命召唤-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4116"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.tmgp.sgame" /> <!--王者荣耀-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4128"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.tencent.lolm" /> <!--英雄联盟-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4129"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="moe.low.arc" /> <!--Arcaea-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:4145"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.android.launcher" /> <!--桌面-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:28672"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.coloros.gallery3d" /> <!--相册-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:28673"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.coloros.calendar" /> <!--日历-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:28674"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.antutu.ABenchMark" /> <!--安兔兔-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:32768"/>
+				</default>
+			</packages>
+			<packages>
+				<!--本配置针对应用的包名列表 -->
+				<pkg_list>
+					<item name="com.ludashi.benchmark" /> <!--鲁大师-->
+				</pkg_list>
+				<default>
+					<command name="set_package_type"	value="mod para_effect set_package_type:32769"/>
+				</default>
+			</packages>
+		</device>
+</filter-conf>

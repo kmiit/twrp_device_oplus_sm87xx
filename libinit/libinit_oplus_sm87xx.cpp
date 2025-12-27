@@ -88,19 +88,19 @@ void SetupModelProperties(const ModelInfo& info, const std::string& region) {
 void vendor_load_properties() {
     std::string buf = "0";
     GetKernelCmdline("oplus_region", &buf);
-    
+
     auto region = std::stoi(buf);
     auto region_suffix_iter = kRegionSuffixMap.find(region);
-    
+
     // Handle unknown regions gracefully
     if (region_suffix_iter == kRegionSuffixMap.end()) {
         LOG(WARNING) << "Unknown oplus_region: " << region << ", using default";
         region_suffix_iter = kRegionSuffixMap.find(0);
     }
-    
+
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
     auto model_info = kModelInfoMap.find(prjname);
-    
+
     // Handle unknown device models
     if (model_info == kModelInfoMap.end()) {
         LOG(ERROR) << "Unknown prjname: " << prjname << ", using default";
@@ -108,4 +108,13 @@ void vendor_load_properties() {
     }
 
     SetupModelProperties(model_info->second, region_suffix_iter->second);
+
+    // Set a prop to handle strongbox
+    switch (prjname) {
+        case 24851:
+            OverrideProperty("twrp.se.no_sb", "true");
+            break;
+        default:
+            OverrideProperty("twrp.se.no_sb", "false");
+    }
 }

@@ -6,4 +6,5 @@ service vendor.keymint-strongbox /odm/bin/hw/android.hardware.security.keymint-s
     group root nfc drmrpc
     capabilities WAKE_ALARM
     seclabel u:r:recovery:s0
+    disabled
 #endif /* OPLUS_FEATURE_SECURITY_COMMON */

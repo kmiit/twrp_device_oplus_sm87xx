@@ -3,3 +3,4 @@ service vendor.secure_element /vendor/bin/hw/android.hardware.secure_element-ser
     user root
     group nfc root
     seclabel u:r:recovery:s0
+    disabled

@@ -9,6 +9,7 @@
 - OnePlus 13 (CN, GL)
 - Realme GT8 (CN)
 - OnePlus Ace 6 (CN)
+- OnePlus Turbo 6 (CN)
 
 ## Build it yourself?
 

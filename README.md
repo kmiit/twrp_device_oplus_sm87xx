@@ -11,6 +11,7 @@
 - Realme GT8 (CN)
 - OnePlus Ace 6 (CN)
 - OnePlus Turbo 6 (CN)
+- OnePlus Pad 2 Pro (CN)
 
 ## Build it yourself?
 

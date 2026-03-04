@@ -116,7 +116,7 @@ void vendor_load_properties() {
     if (prjname == 24926) {
         OverrideProperty("persist.twrp.rotation", "270");
     }
-    // Set a prop to handle rotation
+    // Set a prop to handle strongbox
     switch (prjname) {
         case 24851:
             OverrideProperty("twrp.se.no_sb", "true");

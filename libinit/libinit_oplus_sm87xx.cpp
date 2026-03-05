@@ -48,6 +48,7 @@ const std::unordered_map<int, ModelInfo> kModelInfoMap = {
     {24875, {"OnePlus", "OP612BL1", "OnePlus", "CPH2723", "CPH2723", "OnePlus_13_s",        "1"}}, // pagani IN
     {24851, {"OnePlus", "OP6113L1", "OnePlus", "PLQ110",  "PLQ110",  "OnePlus_ACE_6",       "0"}}, // ktm CN
     {25600, {"realme",  "RE6400L1", "realme",  "RMX6699", "RMX6699", "Realme_GT_8",         "0"}}, // RMX6699 CN
+    {24926, {"OnePlus", "OP615EL1", "OnePlus", "OPD2413", "OPD2413", "OnePlus_Pad2Pro",     "0"}}, // ossi CN
     {0,     {"OPLUS",   "SM87XX",   "OPLUS",   "SM87XX",  "SM87XX",  "SM87XX",              "0"}}, // Default
 };
 
@@ -111,6 +112,10 @@ void vendor_load_properties() {
 
     SetupModelProperties(model_info->second, region_suffix_iter->second);
 
+    // Set a prop to handle rotation
+    if (prjname == 24926) {
+        OverrideProperty("persist.twrp.rotation", "270");
+    }
     // Set a prop to handle strongbox
     switch (prjname) {
         case 24851:

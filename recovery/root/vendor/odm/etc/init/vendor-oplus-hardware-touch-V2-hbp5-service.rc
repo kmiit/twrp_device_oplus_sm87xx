@@ -4,11 +4,11 @@ on early-init
 on init
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
 
-service vendor.touch-aidl-2  /odm/bin/hw/vendor.oplus.hardware.touch.V2-hbp5-service
+service vendor.touch-aidl-2  /odm/bin/hw/touch-service-launcher.sh
     class hal
     capabilities SYS_NICE
     user root
-    group root system everybody
+    group system everybody
     group root system gps radio inet sdcard_r sdcard_rw inet
     socket hidl2touchdaemon_client dgram 0660 root inet
     socket hidl2touchdaemon_server dgram 0660 root inet
@@ -72,4 +72,3 @@ on post-fs-data
     mkdir /data/vendor/touch/simulate 0771 system system
     mkdir /data/vendor/touch/upload 0771 system system
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
-

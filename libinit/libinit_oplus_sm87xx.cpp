@@ -47,6 +47,7 @@ const std::unordered_map<int, ModelInfo> kModelInfoMap = {
     {24821, {"OnePlus", "OP60F5L1", "OnePlus", "PKX110",  "PKX110",  "OnePlus_13_T",        "1"}}, // pagani CN
     {24875, {"OnePlus", "OP612BL1", "OnePlus", "CPH2723", "CPH2723", "OnePlus_13_s",        "1"}}, // pagani IN
     {24851, {"OnePlus", "OP6113L1", "OnePlus", "PLQ110",  "PLQ110",  "OnePlus_ACE_6",       "0"}}, // ktm CN
+    {24885, {"OnePlus", "OP6135L1", "OnePlus", "CPH2793", "CPH2793", "OnePlus_Nord_6",      "0"}}, // volkswagen IN
     {25600, {"realme",  "RE6400L1", "realme",  "RMX6699", "RMX6699", "Realme_GT_8",         "0"}}, // RMX6699 CN
     {24926, {"OnePlus", "OP615EL1", "OnePlus", "OPD2413", "OPD2413", "OnePlus_Pad2Pro",     "0"}}, // ossi CN
     {0,     {"OPLUS",   "SM87XX",   "OPLUS",   "SM87XX",  "SM87XX",  "SM87XX",              "0"}}, // Default

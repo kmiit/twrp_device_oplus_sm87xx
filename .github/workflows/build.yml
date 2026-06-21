@@ -35,6 +35,10 @@ on:
         description: "Build partition"
         required: true
         default: "recovery"
+      SHOULD_RELEASE:
+        description: "Whether to create a release"
+        required: false
+        default: "false"
 
 jobs:
   build:
@@ -58,7 +62,7 @@ jobs:
           echo Device tree branch: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}
           echo Device path: ${{ github.event.inputs.DEVICE_PATH }}
           echo Device name: ${{ github.event.inputs.DEVICE_NAME }}
-          echo Lunch target: ${{ github.event.inputs.LUNCH_TARGET }}
+          echo Lunch target: ${{ env.LUNCH_TARGET }}
           echo Build target: ${{ github.event.inputs.BUILD_PARTITION }}.img
           echo Build date: `date`
           echo
@@ -134,9 +138,19 @@ jobs:
         TIP_PID=$!
         m ${{ github.event.inputs.BUILD_PARTITION }}image
         mv out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.BUILD_PARTITION }}.img out/target/product/${{ github.event.inputs.DEVICE_NAME }}/TWRP-3.7.1-16-${{ github.event.inputs.DEVICE_NAME }}-${{ env.BUILD_DATE }}.img
-        kill $TIP_PID && exit 0        
+        kill $TIP_PID && exit 0
+
+    - name: Upload Artifact
+      if: ${{ github.event.inputs.SHOULD_RELEASE == 'false' }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: TWRP-3.7.1-16-${{ github.event.inputs.DEVICE_NAME }}-${{ env.BUILD_DATE }}
+        path: |
+          out/target/product/${{ github.event.inputs.DEVICE_NAME }}/TWRP-3.7.1-16-${{ github.event.inputs.DEVICE_NAME }}-${{ env.BUILD_DATE }}.img
+          device/${{ github.event.inputs.DEVICE_PATH }}/INFO.txt
 
     - name: Upload to Release
+      if: ${{ github.event.inputs.SHOULD_RELEASE == 'true' }}
       uses: softprops/action-gh-release@v2
       with:
         files: | 

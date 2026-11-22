@@ -25,6 +25,13 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on early-init && property:twrp.se.no_sb=true
+    rm /vendor/odm/etc/vintf/manifest/android.hardware.security.keymint3-service.strongbox.nxp.xml
+    rm /vendor/odm/etc/vintf/manifest/android.hardware.security.sharedsecret3-service.strongbox.nxp.xml
+    rm /vendor/odm/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
+    rm /vendor/odm/etc/vintf/manifest/manifest_oplus_keymint_aidl.xml
+    rm /vendor/odm/etc/vintf/manifest/manifest_oplus_weaver_aidl.xml
+
 on early-fs
     write /proc/sys/walt/sched_lib_name "recovery,Updater,updater,update_engine_sideload"
     write /proc/sys/walt/sched_lib_mask_force 255

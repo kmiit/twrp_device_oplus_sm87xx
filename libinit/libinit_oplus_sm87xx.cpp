@@ -118,6 +118,7 @@ void vendor_load_properties() {
     }
     // Set a prop to handle strongbox
     switch (prjname) {
+        case 24816:
         case 24851:
             OverrideProperty("twrp.se.no_sb", "true");
             break;
